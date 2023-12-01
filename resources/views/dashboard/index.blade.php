@@ -580,6 +580,10 @@
                                                             <td class="text-center align-middle text-success">
                                                                 <b>{{$item->status_pinjaman}}</b>
                                                             </td>
+                                                        @elseif($item->status_pinjaman == "Selesai")
+                                                            <td class="text-center align-middle text-white">
+                                                                <button class="btn btn-sm btn-success disabled"><b>{{$item->status_pinjaman}}</b></button>
+                                                            </td>
                                                         @else
                                                             <td class="text-center align-middle text-danger">
                                                                 <b>{{$item->status_pinjaman}}</b>
@@ -596,7 +600,7 @@
                                                         <td class="text-center align-middle">{{date('d M Y', strtotime($item->tanggal_pinjam))}}</td>
                                                         <td class="text-center align-middle">{{date('d M Y', strtotime($item->tanggal_kembali))}}</td>
                                                         <td class="text-center align-middle">{{$item->keterangan}}</td>
-    
+
                                                         @if ($item->status_pinjaman == "Menunggu Persetujuan")
                                                             <td class="text-center align-middle text-warning">
                                                                 <b>{{$item->status_pinjaman}}</b>
@@ -604,6 +608,10 @@
                                                         @elseif($item->status_pinjaman == "Disetujui")
                                                             <td class="text-center align-middle text-success">
                                                                 <b>{{$item->status_pinjaman}}</b>
+                                                            </td>
+                                                        @elseif($item->status_pinjaman == "Selesai")
+                                                            <td class="text-center align-middle text-white">
+                                                                <button class="btn btn-sm btn-success disabled"><b>{{$item->status_pinjaman}}</b></button>
                                                             </td>
                                                         @else
                                                             <td class="text-center align-middle text-danger">

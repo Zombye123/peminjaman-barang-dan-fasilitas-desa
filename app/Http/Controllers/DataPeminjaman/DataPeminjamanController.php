@@ -103,11 +103,11 @@ class DataPeminjamanController extends Controller
         $dataBarang = DataBarang::orderBy('nama_barang', 'asc')->get();
         $peminjams = User::where('role_id', 2)->get();
 
-        if((Auth::user()->role_id == 1))
+        if((Auth::user()->role_id == 1) && ($dataPinjaman->status_pinjaman != "Selesai") && ($dataPinjaman->status_pinjaman != "Disetujui"))
         {
             return view('data-peminjaman.barang.edit', compact('dataBarang', 'peminjams', 'dataPinjaman'));
         }
-        elseif((Auth::user()->id == $user->id) && (Auth::user()->biodata->tempat_lahir != null) && (Auth::user()->biodata->tanggal_lahir != null) && (Auth::user()->biodata->alamat != null))
+        elseif((Auth::user()->id == $user->id) && ((Auth::user()->biodata->tempat_lahir != null) && (Auth::user()->biodata->tanggal_lahir != null) && (Auth::user()->biodata->alamat != null)) && ($dataPinjaman->status_pinjaman != "Selesai") && ($dataPinjaman->status_pinjaman != "Disetujui"))
         {
             return view('data-peminjaman.barang.edit', compact('dataBarang', 'peminjams', 'dataPinjaman'));
         }
@@ -472,11 +472,13 @@ class DataPeminjamanController extends Controller
         $dataFasilitas = DataFasilitas::orderBy('nama_fasilitas', 'asc')->get();
         $peminjams = User::where('role_id', 2)->get();
 
-        if((Auth::user()->role_id == 1))
+        // dd($dataPinjaman->status_pinjaman);
+
+        if((Auth::user()->role_id == 1) && ($dataPinjaman->status_pinjaman != "Selesai") && ($dataPinjaman->status_pinjaman != "Disetujui"))
         {
             return view('data-peminjaman.fasilitas.edit', compact('dataFasilitas', 'peminjams', 'dataPinjaman'));
         }
-        elseif((Auth::user()->id == $user->id) && (Auth::user()->biodata->tempat_lahir != null) && (Auth::user()->biodata->tanggal_lahir != null) && (Auth::user()->biodata->alamat != null))
+        elseif((Auth::user()->id == $user->id) && ((Auth::user()->biodata->tempat_lahir != null) && (Auth::user()->biodata->tanggal_lahir != null) && (Auth::user()->biodata->alamat != null)) && ($dataPinjaman->status_pinjaman != "Selesai") && ($dataPinjaman->status_pinjaman != "Disetujui"))
         {
             return view('data-peminjaman.fasilitas.edit', compact('dataFasilitas', 'peminjams', 'dataPinjaman'));
         }
