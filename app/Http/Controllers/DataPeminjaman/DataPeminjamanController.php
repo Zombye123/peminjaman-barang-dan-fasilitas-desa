@@ -161,6 +161,10 @@ class DataPeminjamanController extends Controller
                 $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
                 $sisaBarangPinjaman = $barang->jumlah_barang;
             }
+            elseif($request->status_pinjaman == "Selesai"){
+                $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
+                $sisaBarangPinjaman = $barang->jumlah_barang;
+            }
             else{
                 $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
                 $sisaBarangPinjaman = $barang->jumlah_barang;
@@ -175,9 +179,31 @@ class DataPeminjamanController extends Controller
                 $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
                 $sisaBarangPinjaman = $barang->jumlah_barang + $jumlahPinjam;
             }
+            elseif($request->status_pinjaman == "Selesai"){
+                $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
+                $sisaBarangPinjaman = $barang->jumlah_barang + $jumlahPinjam;
+            }
             else{
                 $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
                 $sisaBarangPinjaman = $barang->jumlah_barang + $jumlahPinjam;
+            }
+        }
+        elseif($dataPinjaman->status_pinjaman == "Selesai"){
+            if($request->status_pinjaman == "Disetujui"){
+                $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
+                $sisaBarangPinjaman = $barang->jumlah_barang - $jumlahPinjam;
+            }
+            elseif($request->status_pinjaman == "Ditolak"){
+                $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
+                $sisaBarangPinjaman = $barang->jumlah_barang;
+            }
+            elseif($request->status_pinjaman == "Selesai"){
+                $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
+                $sisaBarangPinjaman = $barang->jumlah_barang;
+            }
+            else{
+                $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
+                $sisaBarangPinjaman = $barang->jumlah_barang;
             }
         }
         else{
@@ -186,6 +212,10 @@ class DataPeminjamanController extends Controller
                 $sisaBarangPinjaman = $barang->jumlah_barang - $jumlahPinjam;
             }
             elseif($request->status_pinjaman == "Ditolak"){
+                $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
+                $sisaBarangPinjaman = $barang->jumlah_barang;
+            }
+            elseif($request->status_pinjaman == "Selesai"){
                 $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
                 $sisaBarangPinjaman = $barang->jumlah_barang;
             }
@@ -242,6 +272,10 @@ class DataPeminjamanController extends Controller
             $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
             $sisaBarang = $barang->jumlah_barang;
         }
+        elseif($dataPinjaman->status_pinjaman == "Selesai"){
+            $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
+            $sisaBarang = $barang->jumlah_barang;
+        }
         else{
             $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
             $sisaBarang = $barang->jumlah_barang + $jumlahPinjam;
@@ -277,8 +311,6 @@ class DataPeminjamanController extends Controller
         {
             abort(403);
         }
-
-        
     }
 
     public function getFasilitas(Request $request)
@@ -335,6 +367,10 @@ class DataPeminjamanController extends Controller
                 $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
                 $sisaFasilitasPinjaman = $fasilitas->jumlah_fasilitas;
             }
+            elseif($request->status_pinjaman == "Selesai"){
+                $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
+                $sisaFasilitasPinjaman = $fasilitas->jumlah_fasilitas;
+            }
             else{
                 $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
                 $sisaFasilitasPinjaman = $fasilitas->jumlah_fasilitas;
@@ -349,9 +385,31 @@ class DataPeminjamanController extends Controller
                 $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
                 $sisaFasilitasPinjaman = $fasilitas->jumlah_fasilitas + $jumlahPinjam;
             }
+            elseif($request->status_pinjaman == "Selesai"){
+                $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
+                $sisaFasilitasPinjaman = $fasilitas->jumlah_fasilitas + $jumlahPinjam;
+            }
             else{
                 $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
                 $sisaFasilitasPinjaman = $fasilitas->jumlah_fasilitas + $jumlahPinjam;
+            }
+        }
+        elseif($dataPinjaman->status_pinjaman == "Selesai"){
+            if($request->status_pinjaman == "Disetujui"){
+                $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
+                $sisaFasilitasPinjaman = $fasilitas->jumlah_fasilitas - $jumlahPinjam;
+            }
+            elseif($request->status_pinjaman == "Ditolak"){
+                $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
+                $sisaFasilitasPinjaman = $fasilitas->jumlah_fasilitas;
+            }
+            elseif($request->status_pinjaman == "Selesai"){
+                $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
+                $sisaFasilitasPinjaman = $fasilitas->jumlah_fasilitas;
+            }
+            else{
+                $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
+                $sisaFasilitasPinjaman = $fasilitas->jumlah_fasilitas;
             }
         }
         else{
@@ -360,6 +418,10 @@ class DataPeminjamanController extends Controller
                 $sisaFasilitasPinjaman = $fasilitas->jumlah_fasilitas - $jumlahPinjam;
             }
             elseif($request->status_pinjaman == "Ditolak"){
+                $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
+                $sisaFasilitasPinjaman = $fasilitas->jumlah_fasilitas;
+            }
+            elseif($request->status_pinjaman == "Selesai"){
                 $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
                 $sisaFasilitasPinjaman = $fasilitas->jumlah_fasilitas;
             }
@@ -463,6 +525,10 @@ class DataPeminjamanController extends Controller
             $sisaFasilitas = $fasilitas->jumlah_fasilitas;
         }
         elseif($dataPinjaman->status_pinjaman == "Ditolak"){
+            $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
+            $sisaFasilitas = $fasilitas->jumlah_fasilitas;
+        }
+        elseif($dataPinjaman->status_pinjaman == "Selesai"){
             $jumlahPinjam = $dataPinjaman->jumlah_pinjaman;
             $sisaFasilitas = $fasilitas->jumlah_fasilitas;
         }

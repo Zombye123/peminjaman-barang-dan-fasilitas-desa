@@ -121,12 +121,16 @@
                                                         <td class="text-center align-middle">
                                                             <div class="btn btn-sm text-success" data-toggle="modal" data-target="#modal-approve{{$item->id}}"><b>{{$item->status_pinjaman}}</b></div>
                                                         </td>
+                                                    @elseif($item->status_pinjaman == "Selesai")
+                                                        <td class="text-center align-middle">
+                                                            <div class="btn btn-sm btn-success text-white" data-toggle="modal" data-target="#modal-approve{{$item->id}}"><b>{{$item->status_pinjaman}}</b></div>
+                                                        </td>
                                                     @else
                                                         <td class="text-center align-middle"><div class="btn btn-sm text-danger" data-toggle="modal" data-target="#modal-approve{{$item->id}}"><b>{{$item->status_pinjaman}}</b></div></td>
                                                     @endif
 
                                                     <td class="text-center align-middle">
-                                                        @if ($item->status_pinjaman == "Disetujui")
+                                                        @if (($item->status_pinjaman == "Disetujui") || $item->status_pinjaman == "Selesai")
                                                             <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal-hapus{{$item->id}}"><i class="fas fa-trash-alt"></i></button>
                                                         @elseif($item->status_pinjaman == "Menunggu Persetujuan")
                                                             @if (Auth::user()->role_id == 1)
@@ -186,6 +190,9 @@
                                                                                     </option>
                                                                                     <option value="Ditolak" <?php if($item->status_pinjaman == "Ditolak") echo 'selected' ?>>
                                                                                         Ditolak
+                                                                                    </option>
+                                                                                    <option value="Selesai" <?php if($item->status_pinjaman == "Selesai") echo 'selected' ?>>
+                                                                                        Selesai
                                                                                     </option>
                                                                                 </select>
                                                                             </div>
@@ -333,6 +340,9 @@
                                                                                     <option value="Ditolak" <?php if($item->status_pinjaman == "Ditolak") echo 'selected' ?>>
                                                                                         Ditolak
                                                                                     </option>
+                                                                                    <option value="Selesai" <?php if($item->status_pinjaman == "Selesai") echo 'selected' ?>>
+                                                                                        Selesai
+                                                                                    </option>
                                                                                 </select>
                                                                             </div>
                                                                         </div>
@@ -445,12 +455,16 @@
                                                         <td class="text-center align-middle">
                                                             <div class="btn btn-sm text-success" data-toggle="modal" data-target="#modal-approve-fasilitas{{$item->id}}"><b>{{$item->status_pinjaman}}</b></div>
                                                         </td>
+                                                    @elseif($item->status_pinjaman == "Selesai")
+                                                        <td class="text-center align-middle">
+                                                            <div class="btn btn-sm btn-success text-white" data-toggle="modal" data-target="#modal-approve-fasilitas{{$item->id}}"><b>{{$item->status_pinjaman}}</b></div>
+                                                        </td>
                                                     @else
                                                         <td class="text-center align-middle"><div class="btn btn-sm text-danger" data-toggle="modal" data-target="#modal-approve-fasilitas{{$item->id}}"><b>{{$item->status_pinjaman}}</b></div></td>
                                                     @endif
 
                                                     <td class="text-center align-middle">
-                                                        @if ($item->status_pinjaman == "Disetujui")
+                                                        @if (($item->status_pinjaman == "Disetujui") || ($item->status_pinjaman == "Selesai"))
                                                             <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal-hapus{{$item->id}}"><i class="fas fa-trash-alt"></i></button>
                                                         @elseif($item->status_pinjaman == "Menunggu Persetujuan")
                                                             @if (Auth::user()->role_id == 1)
@@ -510,6 +524,9 @@
                                                                                     </option>
                                                                                     <option value="Ditolak" <?php if($item->status_pinjaman == "Ditolak") echo 'selected' ?>>
                                                                                         Ditolak
+                                                                                    </option>
+                                                                                    <option value="Selesai" <?php if($item->status_pinjaman == "Selesai") echo 'selected' ?>>
+                                                                                        Selesai
                                                                                     </option>
                                                                                 </select>
                                                                             </div>
@@ -656,6 +673,9 @@
                                                                                     </option>
                                                                                     <option value="Ditolak" <?php if($item->status_pinjaman == "Ditolak") echo 'selected' ?>>
                                                                                         Ditolak
+                                                                                    </option>
+                                                                                    <option value="Selesai" <?php if($item->status_pinjaman == "Selesai") echo 'selected' ?>>
+                                                                                        Selesai
                                                                                     </option>
                                                                                 </select>
                                                                             </div>
