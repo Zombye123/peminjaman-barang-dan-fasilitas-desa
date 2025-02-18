@@ -1,8 +1,8 @@
 ### Project Hendra Ahmadillah : Aplikasi Peminjaman Barang dan Fasilitas Desa
 
-- Developer : Hendra Yanuari Noer Ahmadillah
-- Front-End : Hendra Yanuari Noer Ahmadillah
-- Back-End  : Hendra Yanuari Noer Ahmadillah
+- Developer : Ikhlas Bahrudin
+- Front-End : Ikhlas Bahrudin
+- Back-End  : Ikhlas Bahrudin
 
 **Deskrispi Aplikasi**
 
