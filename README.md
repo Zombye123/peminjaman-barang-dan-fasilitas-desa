@@ -1,8 +1,6 @@
-### Project Hendra Ahmadillah : Aplikasi Peminjaman Barang dan Fasilitas Desa
+### Project Ikhlas Bahrudin : Aplikasi Peminjaman Barang dan Fasilitas Desa
+aplikasi ini tidak sepenuhnya saya buat, melainkan saya terinfirasi dari **Hendra Ahmadillah** kemudian saya kembangkan dan beberapa perubahan sesui kebutuhan aplikasi yang saya bangun.
 
-- Developer : Ikhlas Bahrudin
-- Front-End : Ikhlas Bahrudin
-- Back-End  : Ikhlas Bahrudin
 
 **Deskrispi Aplikasi**
 
@@ -16,7 +14,7 @@ Secara keseluruhan, web aplikasi peminjaman barang dan fasilitas desa tidak hany
 
 ### Teknologi yang Digunakan
 - Bahasa Pemrograman: HTML, CSS, JavaScript, PHP, SQL
-- Framework: Laravel 7.0 dan Bootstrap 4.5
+- Framework: Laravel 7.0/ 7.4 ke atas dan Bootstrap 4.5
 - Database: mySQL
 
 **Langkah-langkah menggunakan Aplikasi**
