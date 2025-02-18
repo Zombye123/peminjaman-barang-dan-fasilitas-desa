@@ -32,7 +32,10 @@ composer update
 
 ### Akses Admin
 - Email : admin@gmail.com
-- Password : superadmin
+- Password : admin
+ ### Akses User
+- Email : robetnt390@gmail.com
+- Password : 12345678
 
 ### USE CASE PRIORITY
 | Use Case                     | Priority | Status |
