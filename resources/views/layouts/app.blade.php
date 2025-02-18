@@ -233,12 +233,20 @@
 
         <!-- Main Footer -->
         <footer class="main-footer">
-            <strong>Copyright &copy; 2023 <a href="{{$aplikasi->link_application_developer}}" target="_blank">{{$aplikasi->application_developer}}</a>.</strong>
-            All rights reserved.
-            <div class="float-right d-none d-sm-inline-block">
-                <b>Version</b> {{$aplikasi->application_version}}
-            </div>
-        </footer>
+    <strong>Copyright &copy; 2025 
+        <a href="{{$aplikasi->link_application_developer}}" target="_blank">{{$aplikasi->application_developer}}</a>.
+    </strong>
+    Template desain <a href="https://adminlte.io" target="_blank" rel="noopener noreferrer">AdminLTE</a>.
+    
+    <div class="float-right d-none d-sm-inline-block">
+        <b>Version</b> 
+        <a href="https://adminlte.io" target="_blank" rel="noopener noreferrer">
+            {{ $aplikasi->application_version }}
+        </a>
+    </div>
+</footer>
+
+
     </div>
     <!-- ./wrapper -->
 

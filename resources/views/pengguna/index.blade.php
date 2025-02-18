@@ -72,7 +72,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header bg-info">
-                                <h3 class="card-title">Data Pendaftar PPDB SMPN 1 Tanjungsiang</h3>
+                                <h3 class="card-title">Data Pengguna/user Yang Terdaftar</h3>
                                 <a href="{{url('/pengguna/tambah')}}">
                                     <button class="btn btn-sm btn-success float-right shadow">Tambah</button>
                                 </a>
