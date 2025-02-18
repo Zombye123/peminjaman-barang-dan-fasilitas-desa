@@ -22,7 +22,7 @@ Secara keseluruhan, web aplikasi peminjaman barang dan fasilitas desa tidak hany
 **Langkah-langkah menggunakan Aplikasi**
 1. Clone project dengan code
 ```shell
-git clone https://gitlab.com/hendrayna55/inventory-desa.git
+https://github.com/Zombye123/spp-sekolah.git
 ```
 2. Import inventory-desa.sql ke database
 3. sesuaikan database pada .env
