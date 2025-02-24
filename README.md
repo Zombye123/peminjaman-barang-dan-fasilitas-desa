@@ -28,6 +28,8 @@ https://github.com/Zombye123/peminjaman-barang-dan-fasilitas-desa.git
 ```shell
 composer update
 ```
+Untuk js dan css mengunakan AdminLte 
+pindahkan secara manual dari filder vendo ke folder foblic
 5. Aplikasi Web siap digunakan
 
 ### Akses Admin
